@@ -48,6 +48,8 @@ class NS(object):
         self.__dict__.clear()
     def _get(self, key, default=None):
         return self.__dict__.get(key, default)
+    def _pop(self, *args, **kwargs):
+        return self.__dict__.pop(*args, **kwargs)
     def _update(self, *args, **kwargs):
         return self.__dict__.update(*args, **kwargs)
     def _setdefault(self, key, default):
@@ -64,3 +66,5 @@ class iNS(NS):
         if value != identity:
             self.__dict__[key] = value
     __setitem__ = __setattr__
+    def _pop(self, key, default=identity):
+        return self.__dict__.pop(key, default)
