@@ -11,7 +11,7 @@ from .six import PY3
 from .six.moves import reduce
 
 
-def _derive(cls, foo='bar'):
+def _derive(cls):
     c = lazy(lambda: type('Identity', (Identity, cls), {}))
     return lambda self: c()(cls)
 

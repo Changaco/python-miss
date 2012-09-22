@@ -27,5 +27,3 @@ def grow(l, size, filler=None):
             return l + [filler]*(size-ll)
     else:
         return l
-
-singleton = lambda a: [a]
