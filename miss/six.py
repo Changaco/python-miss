@@ -9,7 +9,7 @@
 """
 Utilities for writing code that runs on Python 2 and 3.
 
-Original code from http://packages.python.org/six by Benjamin Peterson <benjamin@python.org>
+Original code from http://packages.python.org/six
 """
 
 import operator

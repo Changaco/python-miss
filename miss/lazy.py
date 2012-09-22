@@ -85,7 +85,7 @@ class lazy_dict(UserDict):
     def __repr__(self):
         return (
             '{'+
-            ', '.join(repr(key)+': '+repr(value) for key, value in self.items())+
+            ', '.join(repr(k)+': '+repr(v) for k, v in self.items())+
             '}'
         )
     def lazy(self, key, func):

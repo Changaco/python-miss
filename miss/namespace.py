@@ -49,7 +49,7 @@ class NS(object):
         return (
             self.__class__.__name__+
             '('+
-            ', '.join(str(key)+'='+str(value) for key, value in self.__dict__.items())+
+            ', '.join(str(k)+'='+str(v) for k, v in self.__dict__.items())+
             ')'
         )
     def _clear(self):
@@ -67,9 +67,11 @@ class NS(object):
 class iNS(NS):
     """Identity Namespace
 
-    Returns the Identity instead of raising an exception when accessing a nonexistent attribute.
+    When accessing a nonexistent attribute, returns the Identity instead of
+    raising an exception.
     """
-    __getitem__ = __getattr__ = lambda self, name: self.__dict__.get(name, identity)
+    __getitem__ = __getattr__ = \
+        lambda self, name: self.__dict__.get(name, identity)
     def __setattr__(self, key, value):
         if value != identity:
             self.__dict__[key] = value
