@@ -6,7 +6,15 @@
 # along with this file, see <http://www.gnu.org/licenses/>.
 
 
-concat = lambda l: reduce(list.__add__, l, [])
+from .six.moves import reduce
+
+
+def concat(l):
+    """
+    >>> concat([[0, 1], [2], [3, 4, 5]])
+    [0, 1, 2, 3, 4, 5]
+    """
+    return reduce(list.__add__, l, [])
 
 def grow(l, size, filler=None):
     """Grow the list $l to $size filling with $filler.
