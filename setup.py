@@ -9,7 +9,7 @@ from version import get_version
 setup(
     name='miss',
     version=get_version(),
-    description='A collection of generic functions and classes to fill the gaps of the stdlib',
+    description='A collection of generic functions and classes',
     author='Changaco',
     author_email='changaco ατ changaco δοτ net',
     url='http://changaco.net/gitweb/?p=python-miss.git',
