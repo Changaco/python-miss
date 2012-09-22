@@ -12,6 +12,12 @@ from .six.moves import reduce
 def getattrs(o, *attrs, **kwargs):
     if 'default' in kwargs:
         default = kwargs['default']
-        return reduce(lambda a, b: getattr(a, b, default), attrs, o)
+        c = o
+        for attr in attrs:
+            try:
+                c = getattr(c, attr)
+            except AttributeError:
+                return default
+        return c
     else:
         return reduce(getattr, attrs, o)
