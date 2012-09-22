@@ -1,12 +1,16 @@
-python-miss is a collection of generic functions and classes to fill the gaps of the stdlib.
-
-It includes a modified version of the six module: http://packages.python.org/six
+python-miss is a collection of generic functions and classes.
 
 ## Installation
 
 	pip install miss
 
-python-miss doesn't have dependencies and is compatible with both python 2 and 3.
+python-miss doesn't have dependencies and is compatible with python 2 and 3.
+
+## Usage
+
+There is no documentation yet, the source code should be self-explanatory and
+contains some docstrings, except for the six module for which you can read the
+original documentation at http://packages.python.org/six
 
 ## License
 
