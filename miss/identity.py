@@ -107,3 +107,15 @@ def getattri(o, attr):
 
 def getattrsi(o, *attrs):
     return reduce(lambda a, b: getattr(a, b, identity), attrs, o)
+
+
+def safe(f, default=identity):
+    """
+    Run function f ignoring all exceptions.
+    """
+    def g(*args, **kwargs):
+        try:
+            return f(*args, **kwargs)
+        except:
+            return default
+    return g
