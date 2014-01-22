@@ -109,6 +109,17 @@ def getattrsi(o, *attrs):
     return reduce(lambda a, b: getattr(a, b, identity), attrs, o)
 
 
+def getitemi(o, key):
+    try:
+        return o[key]
+    except KeyError:
+        return identity
+
+
+def getitemsi(o, *keys):
+    return reduce(lambda a, b: getitemi(a, b), keys, o)
+
+
 def safe(f, default=identity):
     """
     Run function f ignoring all exceptions.
