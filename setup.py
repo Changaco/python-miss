@@ -11,7 +11,7 @@ setup(
     author='Changaco',
     author_email='changaco@changaco.oy.lc',
     url='https://github.com/Changaco/python-miss',
-    license='LGPLv3+',
+    license='CC0',
     packages=find_packages(),
     long_description=open(join(dirname(__file__), 'README.rst')).read(),
 )

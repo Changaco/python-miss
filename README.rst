@@ -17,4 +17,4 @@ original documentation at http://packages.python.org/six
 License
 =======
 
-LGPLv3+
+`CC0 Public Domain Dedication <http://creativecommons.org/publicdomain/zero/1.0/>`_
